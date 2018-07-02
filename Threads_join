@@ -1,0 +1,20 @@
+class threads extends Thread{
+    String s;
+    threads(String str)
+    {
+s=str;
+start();
+    }
+
+    public void run()
+    {
+        System.out.println(s);
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+            threads ob=new threads("one");
+            threads ob1=new threads("two");
+            ob.join();
+
+    }
+}
